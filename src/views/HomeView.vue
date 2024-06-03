@@ -1,14 +1,18 @@
 <template>
   <div id="home">
-
+    <ImageTransitionContainer />
   </div>
-</template>
+</template> 
+
 
 <script>
+
+import ImageTransitionContainer from '@/components/ImageTransitionContainer.vue'; 
+
   export default {
     name: 'HomeView',
     components: {
-
+      ImageTransitionContainer,
     }
   }
 </script>
