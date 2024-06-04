@@ -1,19 +1,38 @@
 <template> 
-  <Header />
+  <Header @toggle-menu="toggleMenu" /> 
   <router-view/>
 </template>
 
 <script>
+import Header from '@/components/Header.vue';
 
-  import Header from '@/components/Header.vue';
-
-  export default {
-    name: 'App',
-    components: {
-      Header,
+export default {
+  name: 'App',
+  components: {
+    Header
+  },
+  data() {
+    return {
+     
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.showNav = !this.showNav;
+      this.toggleIcon();
+     
+      if (this.showNav) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     },
-
+    toggleIcon() {
+      this.showBar = !this.showBar;
+      this.showClose = !this.showClose;
+    }
   }
+}
 </script>
 
 <style>
@@ -22,9 +41,9 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;  
-  color: #000;   
+  color: #000;
  }
-
+ 
  :root {
   --pearl-bush: #E3DED1;
   --bison-hide: #C1B59F;

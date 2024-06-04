@@ -1,15 +1,13 @@
 <template>
-    <div id="transition-container" class="d-flex flex-column flex-lg-row col-12">
+    <div id="transition-container" class="h-auto d-flex flex-column flex-lg-row col-12">
         <div id="images-transition" class="col-12 col-lg-6 d-flex justify-content-center align-items-start">           
-            <img v-if="images[currentImage]" :src="require(`@/assets/${images[currentImage]}`)" :key="images[currentImage]" class="front col-12" />
-            <img v-if="images[currentImage + 1]" :src="require(`@/assets/${images[currentImage + 1]}`)" :key="images[currentImage + 1]" class="back col-12 col-lg-6 position-absolute" /> 
-             
+            <img class="front col-12" v-if="images[currentImage]" :src="require(`@/assets/${images[currentImage]}`)" :key="images[currentImage]" alt="image-banner"/>
+            <img class="back col-12 col-lg-6 position-absolute" v-if="images[currentImage + 1]" :src="require(`@/assets/${images[currentImage + 1]}`)" :key="images[currentImage + 1]" alt="image-banner"/>               
         </div>
-        <div class="col-12 col-lg-6 text-center">
-            <h1 class="mt-5">Magda Emilia Arquitetura</h1>
-            <p class="col-12 p-3 p-lg-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Error harum quidem optio aspernatur earum numquam soluta ad a
-                 qui recusandae excepturi consequatur, necessitatibus esse fugit vero itaque ipsam dignissimos quasi.
+        <div class="col-12 col-lg-6 text-center p-2 pt-5 pb-5 p-lg-5">
+            <h1 class="mt-lg-5  fs-1">Magda Emilia Arquitetura</h1>
+            <p class="mt-4 mt-lg-5 col-12 fs-2 text-center text-lg-start">
+                Construindo espaços que respiram vida e inspiração.
             </p>
         </div>
     </div>

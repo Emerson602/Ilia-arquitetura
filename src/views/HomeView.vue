@@ -1,18 +1,23 @@
 <template>
   <div id="home">
+    
     <ImageTransitionContainer />
+    <MostRecent />
   </div>
 </template> 
 
 
 <script>
 
+ 
 import ImageTransitionContainer from '@/components/ImageTransitionContainer.vue'; 
+import MostRecent from '@/components/MostRecent.vue'; 
 
   export default {
     name: 'HomeView',
-    components: {
+    components: {    
       ImageTransitionContainer,
+      MostRecent,
     }
   }
 </script>
@@ -22,5 +27,6 @@ import ImageTransitionContainer from '@/components/ImageTransitionContainer.vue'
     width: 100%;
     height: 100vh;       
   }
+  
 </style>
 
