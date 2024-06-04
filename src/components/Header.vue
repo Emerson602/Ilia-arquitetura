@@ -13,9 +13,7 @@
         </div>
         <div id="menu-desktop" class="d-none d-lg-flex justify-content-center align-items-center text-center m-lg-5 mt-lg-0 mb-lg-0"> 
            <Nav />                
-        </div>
-
-        
+        </div> 
     </header>
 </template>
 
@@ -25,7 +23,7 @@ import SocialMediaInHeader from '@/components/SocialMediaInHeader.vue';
   import Nav from '@/components/Nav.vue'; 
 
   export default {
-    name: 'Header', 
+    name: 'Header',     
     components: {
       SocialMediaInHeader,
       Nav, 
@@ -41,15 +39,15 @@ import SocialMediaInHeader from '@/components/SocialMediaInHeader.vue';
       toggleMenu() {      
         this.showNav = !this.showNav;
         this.toggleIcon();
-        this.emitToggleMenu();
-      },
+        this.emitToggleScroll();
+      },  
       toggleIcon() {
         this.showBar = !this.showBar;
         this.showClose = !this.showClose;
       },
-      emitToggleMenu() {
-        this.$emit('toggle-menu');
-      }
+      emitToggleScroll() { 
+      this.$emit('toggle-scroll'); 
+    }
    
     },
     mounted() {

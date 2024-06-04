@@ -1,6 +1,5 @@
 <template>
-  <div id="home">
-    
+  <div id="home">     
     <ImageTransitionContainer />
     <MostRecent />
   </div>

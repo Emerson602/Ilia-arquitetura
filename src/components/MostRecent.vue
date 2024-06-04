@@ -58,7 +58,7 @@ export default {
     #container-overlay img {
         display: block;
         width: 100%;
-        height: auto; 
+        height: auto;  
     }
 
     #most-recent div:hover, #content:hover {

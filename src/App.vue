@@ -1,5 +1,5 @@
 <template> 
-  <Header @toggle-menu="toggleMenu" /> 
+  <Header @toggle-scroll="toggleScroll" /> 
   <router-view/>
 </template>
 
@@ -13,13 +13,12 @@ export default {
   },
   data() {
     return {
-     
+
     };
   },
   methods: {
-    toggleMenu() {
-      this.showNav = !this.showNav;
-      this.toggleIcon();
+    toggleScroll() {
+      this.showNav = !this.showNav;   
      
       if (this.showNav) {
         document.body.style.overflow = 'hidden';
@@ -27,10 +26,7 @@ export default {
         document.body.style.overflow = '';
       }
     },
-    toggleIcon() {
-      this.showBar = !this.showBar;
-      this.showClose = !this.showClose;
-    }
+    
   }
 }
 </script>
@@ -43,7 +39,7 @@ export default {
   font-family: "Raleway", sans-serif;  
   color: #000;
  }
- 
+
  :root {
   --pearl-bush: #E3DED1;
   --bison-hide: #C1B59F;
