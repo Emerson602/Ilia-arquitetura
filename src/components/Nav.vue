@@ -11,7 +11,7 @@
   
   <script>
   export default {
-    name: 'NavDesktop', 
+    name: 'Nav', 
   }
   </script>   
    
