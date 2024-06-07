@@ -2,7 +2,7 @@
 
     <section id="follow-me" class="p-0 pt-5 pb-5 d-flex flex-column flex-lg-row justify-content-center align-items-center">
 
-        <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-center">
+        <div class="m-0 col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
             <h3 class="fs-2 mt-3 mt-lg-0">Siga me nas redes:</h3>
             <div class="mt-3 col-12 d-flex justify-content-center align-items-center flex-wrap">
                 <a :href="link_instagram" target="_blank" class="rounded m-2 d-flex justify-content-center align-items-center">
@@ -20,10 +20,10 @@
             </div> 
         </div>
         
-        <div class="col-12 col-lg-8 d-flex flex-column flex-lg-row justify-content-center align-items-center">
-            <img class="col-10 col-lg-3 mt-5 m-lg-2 mt-lg-0 mb-lg-0" :src="image" alt=""/>
-            <img class="col-10 col-lg-3 mt-3 m-lg-2 mt-lg-0 mb-lg-0" :src="image" alt=""/>
-            <img class="col-10 col-lg-3 mt-3 m-lg-2 mt-lg-0 mb-lg-0" :src="image" alt=""/>
+        <div class="col-12 col-lg-6 d-flex flex-column flex-lg-row justify-content-center align-items-center flex-wrap">
+            <img class="col-10 col-lg-4 col-xl-3 mt-5 m-lg-2 mt-lg-0 mb-lg-0" :src="image" alt=""/>
+            <img class="col-10 col-lg-4 col-xl-3 mt-3 m-lg-2 mt-lg-0 mb-lg-0" :src="image" alt=""/>
+            <img class="col-10 col-lg-4 col-xl-3 mt-3 m-lg-2 mt-lg-3 mt-xl-0 mb-lg-0" :src="image" alt=""/>
         </div>
     </section>
     
@@ -64,7 +64,7 @@ export default {
 
 #follow-me a:hover { 
     background-color: var(--cocoa);
-    transition: 1s;     
+    transition: 1s;    
 }
 
 a:hover svg, a:hover span {

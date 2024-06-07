@@ -1,6 +1,7 @@
 <template>
   <div id="home">     
     <ImageTransitionContainer />
+    <ApresentationContainer />
     <MostRecent />
     <Concept />
     <FollowMe />
@@ -12,7 +13,8 @@
 <script>
 
  
-import ImageTransitionContainer from '@/components/ImageTransitionContainer.vue'; 
+import ImageTransitionContainer from '@/components/ImageTransitionContainer.vue';
+import ApresentationContainer from '@/components/ApresentationContainer.vue'; 
 import MostRecent from '@/components/MostRecent.vue'; 
 import Concept from '@/components/Concept.vue';
 import FollowMe from '@/components/FollowMe.vue';
@@ -23,6 +25,7 @@ import Footer from '@/components/Footer.vue';
     name: 'HomeView',
     components: {    
       ImageTransitionContainer,
+      ApresentationContainer,
       MostRecent,      
       Concept, 
       FollowMe,  

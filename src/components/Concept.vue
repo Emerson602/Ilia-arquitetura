@@ -35,6 +35,6 @@ export default {
 
 <style scoped>
 #concept {
-    background-color: var(--cocoa);     
+    background-color: var(--natural);     
 } 
 </style>

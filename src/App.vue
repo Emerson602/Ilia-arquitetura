@@ -38,6 +38,10 @@ export default {
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;  
   color: #000;
+ } 
+
+ h1, h2, h3, h4 {
+  font-weight: bolder; 
  }
 
  :root {
