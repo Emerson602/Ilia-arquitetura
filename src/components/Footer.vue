@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
     #footer {
-        background-color: var(--cocoa);        
+        background-color: var(--color-medium-brown);        
         border-top: solid 2px var(--coconut);    
         text-transform: uppercase;
         font-size: 0.8rem;

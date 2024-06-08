@@ -1,8 +1,8 @@
-<template>     
+<template>  
     <div id="images-transition" class="h-auto col-12 d-flex justify-content-center align-items-start">           
         <img class="front col-12" v-if="images[currentImage]" :src="require(`@/assets/${images[currentImage]}`)" :key="images[currentImage]" alt="image-banner"/>
         <img class="back col-12 position-absolute" v-if="images[currentImage + 1]" :src="require(`@/assets/${images[currentImage + 1]}`)" :key="images[currentImage + 1]" alt="image-banner"/>               
-    </div>       
+    </div>    
 </template>
     
 <script> 
@@ -79,6 +79,6 @@ export default {
         opacity: 1; 
     }
 } 
-  
+
 </style>
 

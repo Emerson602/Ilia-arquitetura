@@ -36,7 +36,7 @@ export default {
     
 <style scoped>     
 #social-media-header {
-    background-color: var(--cocoa);
+    background-color: var(--color-medium-brown);
 }
 
 a {

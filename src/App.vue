@@ -32,6 +32,34 @@ export default {
 </script>
 
 <style>
+
+@font-face {
+    font-family: 'Tan Pearl';
+    src: url('../public/fonts/fonnts.com-tan-pearl.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alta Regular';
+    src: url('../public/fonts/Alta_regular.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alta Light';
+    src: url('../public/fonts/Alta_light.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alta Caption';
+    src: url('../public/fonts/Alta_caption.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
  * {
   padding: 0;
   margin: 0;
@@ -41,11 +69,12 @@ export default {
  } 
 
  h1, h2, h3, h4 {
-  font-weight: bolder; 
+  font-weight: bolder;   
+  font-family: 'Alta Regular', sans-serif;
  }
 
  :root {
-  --pearl-bush: #E3DED1;
+  --pearl-bush: #E3DED1; 
   --bison-hide: #C1B59F;
   --stonewall: #908471;
   --soya-bean: #5F5A4D;
@@ -59,6 +88,8 @@ export default {
   --natural: #806044;
   --palm-oil: #502510;
   --cocoa: #412F26;
+  --color-light-beige: #C5BBB1;
+  --color-medium-brown: #997E67;
 }
 
 #nav ul, #nav a {
@@ -67,7 +98,7 @@ export default {
 }
 
 li:hover, a:hover {
-  color: var(--coconut);
+  color: var(--color-medium-brown);
   transition: 1s;
 }
 

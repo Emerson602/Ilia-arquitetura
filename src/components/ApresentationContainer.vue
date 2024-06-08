@@ -1,10 +1,10 @@
 <template>
     <div id="apresentation-container" class="h-auto d-flex flex-column col-12">
 
-        <div class="col-12 text-center pt-5 pb-5 d-flex flex-column justify-content-center align-items-center">
+        <div class="col-12 p-0 pt-5 pb-5 text-center d-flex flex-column justify-content-center align-items-center">
 
-            <h1 id="title" class="fs-1">
-                <span class="m-1">
+            <h1 id="title" class="fs-2">
+                <span class="m-1 ">
                     <span id="letter-m" class="letter">M</span>
                     <span id="remaining-m" class="remaining">agda</span>
                 </span>
@@ -18,8 +18,8 @@
                 </span> 
             </h1>
 
-            <p class="mt-4 fs-2 text-center">
-                Construindo espaços que respiram vida e inspiração.
+            <p class="mt-2 fs-2 text-center text-light">
+                Construindo espaços que respiram vida e inspiração. 
             </p>
         </div>
     </div>
@@ -41,7 +41,7 @@ export default {
             remainings.forEach(function(remaining) {
                 remaining.classList.add('remainings-animation');
             });
-
+            
             letters.forEach(function(letter) {
                 letter.classList.add('letters-animation');
             });
@@ -70,7 +70,11 @@ export default {
 <style scoped>     
 
 #apresentation-container {
-    background-color: var(--natural);     
+    background-color: var(--color-medium-brown);  
+    background-image: url('@/assets/bg-mea.gif');   
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: left;    
 }
 
 #apresentation-container p {
@@ -79,6 +83,9 @@ export default {
 
 #apresentation-container span {
     font-size: 2.5rem;
+    font-family: 'alta', serif !important;
+    font-weight: normal;     
+    color: var(--pearl-bush); 
 }
 
 .letters-animation {
