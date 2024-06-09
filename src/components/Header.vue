@@ -32,13 +32,25 @@ export default {
       showNav: false,
       showBar: true,
       showClose: false,
+      screenWidth: window.innerWidth,
     }   
   },
+  computed: {
+    screenSizeMessage() {
+      return this.screenWidth;
+    },
+  },
   methods: {
-    toggleMenu() {      
-      this.showNav = !this.showNav;
-      this.toggleIcon();
-      this.emitToggleScroll();
+    updateScreenSize() {
+      this.screenWidth = window.innerWidth;              
+    },
+    toggleMenu() {   
+         
+      if(this.screenWidth <= 991) {
+        this.showNav = !this.showNav;
+        this.toggleIcon();
+        this.emitToggleScroll();
+      }   
     },  
     toggleIcon() {
       this.showBar = !this.showBar;
@@ -47,7 +59,14 @@ export default {
     emitToggleScroll() { 
       this.$emit('toggle-scroll'); 
     }
-  }
+  },
+  mounted() {
+    window.addEventListener('resize', this.updateScreenSize);
+    this.updateScreenSize(); 
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.updateScreenSize);
+  },
 }
 </script>  
 

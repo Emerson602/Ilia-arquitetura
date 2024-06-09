@@ -12,14 +12,22 @@
 <script>
 export default {
   name: 'Nav',
+  data() {
+    return {
+
+    };
+  },
+
   methods: { 
+
     emitToggleScroll() { 
       this.$emit('toggle-menu'); 
     }, 
     closeMenu() {
       this.emitToggleScroll(); 
     } 
-  }
+  },
+
 }
 </script>   
    
