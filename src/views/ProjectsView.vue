@@ -1,23 +1,29 @@
-<template>
-  <div class="projects">
-    <NavDesktop />
-    <NavMobile />
-  </div>
+<template>  
+    <Gallery /> 
+    <Footer /> 
 </template>
 
 <script>
-  export default {
-    name: 'ProjectsView',
-    components: {
+import Gallery from '@/components/Gallery.vue'; 
+import Footer from '@/components/Footer.vue'; 
 
-    }
-  }
-</script>
-
-<style scoped>
-  div {
-    width: 100%;
-    height: 100vh;
-  }
-</style>
+export default {
+  name: 'ProjectsView',
+  components: {
+    Gallery,
+    Footer,     
+  },
+  data() {
+    return {
+      
+    };
+  },
   
+  methods: {
+      
+  },
+  mounted() {
+          
+  }
+}
+</script>

@@ -25,8 +25,9 @@ import Footer from '@/components/Footer.vue';
       ImageTransitionContainer, 
       MostRecent,      
       Concept, 
-      FollowMe,  
-      Footer,
+      FollowMe, 
+      Footer, 
+
     }
   }
 </script>
