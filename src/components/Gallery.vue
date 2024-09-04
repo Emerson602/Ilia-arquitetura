@@ -1,13 +1,14 @@
 <template>
-  <section class="col-12 pt-5 pb-5 d-flex flex-column justify-content-center align-items-center">
-    <div id="gallery-container" class="d-flex flex-row justify-content-center align-items-center flex-wrap">
-      <div id="project" class="col-4 m-3 d-flex flex-column justify-content-center align-items-center" v-for="(project, index) in visibleProjects" :key="index">
-        <h3>{{ project.name }}</h3>
-        <p>{{ project.description }}</p> 
-        <img class="col-12" :src="project.images[0]" alt="Project Image">       
+  <section class="mt-5 col-12 pt-5 pb-5 d-flex flex-column justify-content-center align-items-center">  
+    <h2 class="fs-1">Projetos</h2>  
+    <div id="gallery-container" class="d-flex flex-row justify-content-center align-items-center flex-wrap">       
+      <div id="project" class="col-11 col-lg-5 mt-2 mt-lg-0 m-0 m-lg-3 d-flex flex-column justify-content-center align-items-center" v-for="(project, index) in visibleProjects" :key="index">
+        <h3 class="mt-5 fs-2">{{ project.name }}</h3>
+        <img class="col-12 mt-3" :src="project.imagesDay[0]" alt="Project Image" @click="openModal(project)">   
+        <p class="mt-3 fs-5">{{ project.description }}</p>       
       </div>      
     </div>
-    <button id="show-more" @click="showMoreProjects">
+    <button id="show-more" @click="showMoreProjects" class="rounded">
         <svg v-if="maxProjects <= totalProjects" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
           <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
@@ -17,9 +18,15 @@
           <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
         </svg>
       </button>
-      <ProjectModal />
-  </section>
+      
+      <ProjectModal         
+         :project="selectedProject"
+         :isVisible="isModalVisible"
+         @close="isModalVisible = false"
+         @change-scroll-width="changeWidthScroll"
+      />
 
+  </section>
 </template>
 
 
@@ -36,6 +43,8 @@ export default {
       totalProjects: 0,
       maxProjects: 4,
       showMore: true,
+      selectedProject: null,
+      isModalVisible: false,
     }
   },
   computed: {
@@ -49,23 +58,34 @@ export default {
         {
           name: 'project 1',
           description: 'lorem ipsum',
-          images: [require('@/assets/1.webp'), require('@/assets/2.webp'), require('@/assets/3.webp')]
+          imagesDay: [require('@/assets/1.webp'), require('@/assets/2.webp'), require('@/assets/3.webp')],
+          imagesNight: [require('@/assets/1.webp'), require('@/assets/2.webp'), require('@/assets/3.webp')],
         },
         {
           name: 'project 2',
           description: 'lorem ipsum',
-          images: [require('@/assets/2.webp'), require('@/assets/1.webp'), require('@/assets/3.webp')]
+          imagesDay: [require('@/assets/2.webp'), require('@/assets/1.webp'), require('@/assets/3.webp')],
+          imagesNight: [require('@/assets/1.webp'), require('@/assets/2.webp'), require('@/assets/3.webp')],
         },
         {
           name: 'project 3',
           description: 'lorem ipsum',
-          images: [require('@/assets/3.webp'), require('@/assets/1.webp'), require('@/assets/2.webp')]
+          imagesDay: [require('@/assets/3.webp'), require('@/assets/1.webp'), require('@/assets/2.webp')],
+          imagesNight: [require('@/assets/1.webp'), require('@/assets/2.webp'), require('@/assets/3.webp')],
         },
         {
           name: 'project 4',
           description: 'lorem ipsum',
-          images: [require('@/assets/3.webp'), require('@/assets/1.webp'), require('@/assets/2.webp')]
+          imagesDay: [require('@/assets/3.webp'), require('@/assets/1.webp'), require('@/assets/2.webp')],
+          imagesNight: [require('@/assets/1.webp'), require('@/assets/2.webp'), require('@/assets/3.webp')],
         },
+        {
+          name: 'project 5',
+          description: 'lorem ipsum',
+          imagesDay: [require('@/assets/3.webp'), require('@/assets/1.webp'), require('@/assets/2.webp')],
+          imagesNight: [require('@/assets/1.webp'), require('@/assets/2.webp'), require('@/assets/3.webp')],
+        },
+        
       ];
       
       this.totalProjects = projects.length;
@@ -80,13 +100,34 @@ export default {
         this.maxProjects = numberVisibleProjects;
       }
     },
+    openModal(project) {
+      this.selectedProject = project;
+      this.isModalVisible = true;       
+      this.changeWidthScroll(0);    
+    },
+    changeWidthScroll(newWidth) {      
+
+      const style = document.createElement('style');
+
+      style.innerHTML = `        
+        ::-webkit-scrollbar {
+          width: ${newWidth}px !important; 
+        } 
+      ` ; 
+
+      document.head.appendChild(style);       
+
+    },
+    
   },
   mounted() {
     this.createProjects();   
   }
 }
 </script>
+
 <style scoped>
+
 #gallery-container {
   padding: 20px;
 }
@@ -94,6 +135,7 @@ export default {
 #project img {
   max-width: 100%;
   height: auto;
+  cursor: pointer;
 }
 
 #show-more {
@@ -104,12 +146,20 @@ export default {
 }
 
 button { 
-  background-color: var(--cocoa) !important; 
-  padding: 10px 80px;
-  border-radius: 10px; 
+  background-color: var(--pearl-bush) !important;  
+  border: solid 2px var(--cocoa) !important;
+  height: 40px;
+  width: 200px; 
 }
 
-svg {
-  fill: #fff;
+button:hover {
+  background-color: var(--cocoa) !important;
+  transition: 1s;      
 }
+
+button:hover svg {
+  fill: #fff !important;
+  transition: 1s;    
+}
+
 </style>

@@ -1,7 +1,7 @@
 <template>
     <section id="concept" class="pt-5 pb-5 col-12 d-flex flex-column flex-lg-row justify-content-center align-items-center">
 
-        <div class="p-5 col-12 col-lg-5">
+        <div class="p-5 col-12 col-lg-5 text-center text-lg-start">
            <h3 class="fs-1">lorem ipsum</h3>
            <p class="fs-5 mt-5">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -37,4 +37,8 @@ export default {
 #concept {
     background-color: var(--color-medium-brown);     
 } 
+
+#concept p {
+  text-wrap: balance;
+}
 </style>

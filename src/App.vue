@@ -92,14 +92,32 @@ export default {
   --color-medium-brown: #997E67;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--pearl-bush);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bison-hide);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--natural);
+}
+
 #nav ul, #nav a {
     text-decoration: none;
     list-style: none; 
 }
 
-li:hover, a:hover {
+li:hover, a:hover, button:hover {
   color: var(--color-medium-brown);
-  transition: 1s;
+  transition: 1s;  
+  cursor: pointer !important;
 }
 
 @media(max-width: 992px) { 

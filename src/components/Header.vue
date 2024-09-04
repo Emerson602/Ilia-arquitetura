@@ -73,6 +73,7 @@ export default {
   
 <style scoped> 
 
+   
   #header {
     width: 100%;
     background-color: var(--pearl-bush);    
