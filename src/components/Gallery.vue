@@ -24,18 +24,19 @@
          :isVisible="isModalVisible"
          @close="isModalVisible = false"
          @change-scroll-width="changeWidthScroll"
-      />
-
+      />   
+     
   </section>
 </template>
 
 
 <script>
-import ProjectModal from '@/components/ProjectModal.vue'; 
+import ProjectModal from '@/components/ProjectModal.vue';  
+
 export default {
   name: 'Gallery',
   components: {
-    ProjectModal,     
+    ProjectModal,   
   },
   data() {
     return {
@@ -54,6 +55,7 @@ export default {
   },
   methods: {
     createProjects() {
+
       const projects = [
         {
           name: 'project 1',
@@ -90,6 +92,7 @@ export default {
       
       this.totalProjects = projects.length;
       this.projects = projects;
+      return projects
     },
     showMoreProjects() {
       const numberVisibleProjects = 4;
@@ -121,7 +124,7 @@ export default {
     
   },
   mounted() {
-    this.createProjects();   
+    this.createProjects();    
   }
 }
 </script>
