@@ -1,15 +1,18 @@
 <template> 
   <Header @toggle-scroll="toggleScroll" /> 
+  <Preload />
   <router-view/>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'; 
+import Preload from '@/components/Preload.vue'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Preload
   },
   data() {
     return {
