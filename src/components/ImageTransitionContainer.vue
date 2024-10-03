@@ -1,8 +1,12 @@
-<template>  
-    <div id="images-transition" class="h-auto col-12 d-flex justify-content-center align-items-start">           
-        <img class="front col-12" v-if="images[currentImage]" :src="require(`@/assets/${images[currentImage]}`)" :key="images[currentImage]" alt="image-banner"/>
-        <img class="back col-12 position-absolute" v-if="images[currentImage + 1]" :src="require(`@/assets/${images[currentImage + 1]}`)" :key="images[currentImage + 1]" alt="image-banner"/>               
-    </div>    
+<template>   
+    <div id="images-transition" class="h-auto col-12 d-flex d-lg-none justify-content-center align-items-start">           
+        <img class="front col-12" v-if="mobileImages[currentImage]" :src="require(`@/assets/${mobileImages[currentImage]}`)" :key="mobileImages[currentImage]" alt="image-banner"/>
+        <img class="back col-12 position-absolute" v-if="mobileImages[currentImage + 1]" :src="require(`@/assets/${mobileImages[currentImage + 1]}`)" :key="mobileImages[currentImage + 1]" alt="image-banner"/>               
+    </div> 
+    <div id="images-transition" class="h-auto col-12 d-none d-lg-flex justify-content-center align-items-start">           
+        <img class="front col-12" v-if="desktopImages[currentImage]" :src="require(`@/assets/${desktopImages[currentImage]}`)" :key="desktopImages[currentImage]" alt="image-banner"/>
+        <img class="back col-12 position-absolute" v-if="desktopImages[currentImage + 1]" :src="require(`@/assets/${desktopImages[currentImage + 1]}`)" :key="desktopImages[currentImage + 1]" alt="image-banner"/>               
+    </div> 
 </template>
     
 <script> 
@@ -12,10 +16,15 @@ export default {
         data() {
             return {
                 currentImage: 0,        
-                images: [
-                    '1.webp',
-                    '2.webp',
-                    '3.webp',
+                desktopImages: [
+                    'transition-desktop-1.webp',
+                    'transition-desktop-2.webp',
+                    'transition-desktop-3.webp',
+                ],
+                mobileImages: [
+                    'transition-mobile-1.webp',
+                    'transition-mobile-2.webp',
+                    'transition-mobile-3.webp',
                 ],
             }   
         },
@@ -40,7 +49,7 @@ export default {
     
 <style scoped>   
 
-#images-transition {
+#desktopImages-transition {
     overflow: hidden;
 } 
 

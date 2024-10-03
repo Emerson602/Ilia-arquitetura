@@ -34,7 +34,7 @@ export default {
   name: 'FollowMe',
   data() {
     return {
-        image: require('@/assets/4.webp'),
+        image: require('@/assets/concept-image.webp'),
         link_instagram: 'https://www.instagram.com/magdaemiliaarquitetura/',
         link_tiktok: 'https://www.tiktok.com/@mahemiliaarq?_t=8mvejGJJktZ&_r=1',
     };

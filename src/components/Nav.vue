@@ -4,7 +4,7 @@
       <router-link to="/" @click="closeMenu"><li class="m-2 m-lg-2">Inicio</li></router-link> 
       <router-link to="/projects" @click="closeMenu"><li class="m-2 m-lg-2">Projetos</li></router-link> 
       <router-link to="/about" @click="closeMenu"><li class="m-2 m-lg-2">Sobre</li></router-link>       
-      <a class="m-2 m-lg-2 d-none" @click="closeMenu" href="https://api.whatsapp.com/send?phone=5582993975054" target="_blank"><li>Quero um projeto</li></a>
+      <a class="m-2 m-lg-2" @click="closeMenu" href="https://api.whatsapp.com/send?phone=5582993975054" target="_blank"><li>Quero um projeto</li></a>
     </ul>            
   </nav>  
 </template>
