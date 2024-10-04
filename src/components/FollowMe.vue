@@ -21,9 +21,9 @@
         </div>
         
         <div class="col-12 col-lg-6 d-flex flex-column flex-lg-row justify-content-center align-items-center flex-wrap">
-            <img class="col-10 col-lg-4 col-xl-3 mt-5 m-lg-2 mt-lg-0 mb-lg-0" :src="image" alt=""/>
-            <img class="col-10 col-lg-4 col-xl-3 mt-3 m-lg-2 mt-lg-0 mb-lg-0" :src="image" alt=""/>
-            <img class="col-10 col-lg-4 col-xl-3 mt-3 m-lg-2 mt-lg-3 mt-xl-0 mb-lg-0" :src="image" alt=""/>
+            <img class="col-10 col-lg-4 col-xl-3 mt-5 m-lg-2 mt-lg-0 mb-lg-0" :src="image_1" alt=""/>
+            <img class="col-10 col-lg-4 col-xl-3 mt-3 m-lg-2 mt-lg-0 mb-lg-0" :src="image_2" alt=""/>
+            <img class="col-10 col-lg-4 col-xl-3 mt-3 m-lg-2 mt-lg-3 mt-xl-0 mb-lg-0" :src="image_3" alt=""/>
         </div>
     </section>
     
@@ -34,7 +34,9 @@ export default {
   name: 'FollowMe',
   data() {
     return {
-        image: require('@/assets/concept-image.webp'),
+        image_1: require('@/assets/followMe-image-1.webp'),
+        image_2: require('@/assets/followMe-image-2.webp'),
+        image_3: require('@/assets/followMe-image-3.webp'),
         link_instagram: 'https://www.instagram.com/magdaemiliaarquitetura/',
         link_tiktok: 'https://www.tiktok.com/@mahemiliaarq?_t=8mvejGJJktZ&_r=1',
     };
