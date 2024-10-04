@@ -6,21 +6,21 @@
         <div class="col-12 d-flex flex-row justify-content-center align-items-center flex-wrap">
             <div id="container-overlay" class="position-relative col-10 col-sm-7 col-md-5 col-lg-3 m-4 d-flex justify-content-center align-items-center">
                 <div id="overlay" class="p-2 position-absolute d-flex flex-column justify-content-center align-items-center col-10 col-sm-7 col-md-5 col-lg-3">
-                    <span>lorem ipsum</span>
+                    <span class="text-white fs-5">Closet vista 1</span>
                 </div>
                 <img class="col-12" src="../assets/closet-image-1.webp">
             </div>
 
             <div id="container-overlay" class="position-relative col-10 col-sm-7 col-md-5 col-lg-3 m-4 d-flex justify-content-center align-items-center">
                 <div id="overlay" class="p-2 position-absolute d-flex flex-column justify-content-center align-items-center col-10 col-sm-7 col-md-5 col-lg-3">
-                    <span>lorem ipsum</span>
+                    <span class="text-white fs-5">Closet vista 2</span>
                 </div>
                 <img class="col-12" src="../assets/closet-image-2.webp">
             </div>
 
             <div id="container-overlay" class="position-relative col-10 col-sm-7 col-md-5 col-lg-3 m-4 d-flex justify-content-center align-items-center">
                 <div id="overlay" class="p-2 position-absolute d-flex flex-column justify-content-center align-items-center col-10 col-sm-7 col-md-5 col-lg-3">
-                    <span>lorem ipsum</span>
+                    <span class="text-white fs-5">Closet vista 3</span>
                 </div>
                 <img class="col-12" src="../assets/closet-image-3.webp"> 
             </div>  
